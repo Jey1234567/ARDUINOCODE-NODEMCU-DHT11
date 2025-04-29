@@ -1,5 +1,5 @@
 # 🧩Send Temperature Data from NODEMCU via HTTP Post
-![grafik](https://github.com/user-attachments/assets/702004a3-869b-4e64-8645-d6999e40c9dd)
+![grafik](https://github.com/user-attachments/assets/ad914fbe-f31c-4b47-9308-3f66f673068f)
 
 🛠️ Components Used
 1. Jumper Wire (F to F)
