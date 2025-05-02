@@ -61,5 +61,5 @@ void loop() {
     Serial.println("WiFi disconnected.");
   }
 
-  delay(10000); // send every 10 seconds
+  delay(5000); // send every 5 seconds
 }
