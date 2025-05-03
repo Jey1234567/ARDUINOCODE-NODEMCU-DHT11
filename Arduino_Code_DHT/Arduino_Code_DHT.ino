@@ -29,7 +29,8 @@ void setup() {
 
 void loop() {
   float temperature = dht.readTemperature();
-
+  float humidity = dht.readHumidity();
+  
   if (isnan(temperature)) {
     Serial.println("Failed to read from DHT sensor!");
     delay(5000);
@@ -39,6 +40,9 @@ void loop() {
   Serial.print(temperature);
   Serial.println(" °C");
 
+  Serial.print("Humidity: ");
+  Serial.print(temperature);
+  Serial.println(" %");
 
   if (WiFi.status() == WL_CONNECTED) {
     WiFiClient client;
@@ -47,8 +51,9 @@ void loop() {
     http.begin(client, serverUrl);
     http.addHeader("Content-Type", "application/json");
 
-    // JSON in the form{ "temp": 25.6 }
-    String json = "{\"temp\":" + String(temperature, 2) + "}";
+    // JSON in the form{ "temp": 25.6, 
+    //                    "humid": 52}
+    String json = "{\"temp\":" + String(temperature, 2) +","+ "\n" + "\"humid\":" + String(humidity, 2) + "}";
     Serial.println(json); // log before POST
 
 
