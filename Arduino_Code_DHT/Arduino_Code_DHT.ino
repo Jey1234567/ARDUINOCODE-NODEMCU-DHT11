@@ -52,7 +52,7 @@ void loop() {
     http.addHeader("Content-Type", "application/json");
 
     // JSON in the form{ "temp": 25.6, 
-    //                    "humid": 52}
+    //                   "humid": 52}
     String json = "{\"temp\":" + String(temperature, 2) +","+ "\n" + "\"humid\":" + String(humidity, 2) + "}";
     Serial.println(json); // log before POST
 
